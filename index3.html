@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>basic vue 3 part3</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <link rel="stylesheet" href="stylesheet3.css">
+</head>
+<body"" id = "app">
+    <ul v-for="fruit in fliterFruits">
+        <li :class="{fav : fruit.isFav}" @click="changeFav(fruit)">
+            <h3>{{fruit.title}}</h3>
+            <p>{{fruit.subject}}</p>
+            <!-- ":" this character works insted of v-bind: for example v-bind:src or v-bind:href -->
+            <img :src="fruit.image" alt="fruit.title" >
+        </li>
+    </ul>
+    
+</body>
+    <script src="app3.js"></script>
+</html>
